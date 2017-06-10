@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { NewComponent } from './components/new/new.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BeeActivityComponent } from './components/bee-activity/bee-activity.component';
 import { TodosComponent } from './components/todos/todos.component';
@@ -23,7 +22,6 @@ import { NewTodoComponent } from './components/new-todo/new-todo.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NewComponent,
     HeaderComponent,
     BeeActivityComponent,
     TodosComponent,

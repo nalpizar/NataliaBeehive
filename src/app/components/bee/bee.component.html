@@ -1,3 +1,16 @@
-<p>
-  bee works!
-</p>
+<div class="bee">
+    <p>Name: {{bee.name}}</p>
+    <p>Username: {{bee.username}}</p>
+    <p>Email: {{bee.email}}</p>
+    <p>Phone: {{bee.phone}}</p>
+    <p>City: {{bee.address.city}}</p>
+    <p>Post: <span *ngIf="bee.posts?.length > 0">{{bee.posts.length}}</span><span *ngIf="bee.posts?.length === 0">0</span></p>
+    <p>Photos: <span *ngIf="bee.album?.photos.length > 0">{{bee.album.photos.length}}</span><span *ngIf="bee.album?.photos.length === 0">0</span></p>
+    <input type="button" value="Posts">
+    <input type="button" value="Album">
+    <input type="button" value="Todo">
+    <br>
+    <br>
+    <br>
+    <br>
+</div>

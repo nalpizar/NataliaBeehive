@@ -95,12 +95,12 @@ export class AppComponent {
       });
 
       //1. Agregar tu información a este usuario.
-      let company = new Company('ludusy', 'A better world for everyone', 'Dream does not cost a dine');
-      let address = new Address('Rea Ave', 'Mountain View Valley', 'Cartago', '1000', new Geo
+      let company = new Company('nalpizar', 'A better world for everyone', 'Dream does not cost a dine');
+      let address = new Address('Rea Ave', 'Mountain View Valley', 'Desamparados', '1000', new Geo
         ('0.000001', '0.000002'));
-      let me = new Bee(11, 'Esteban Padilla', 'epadilla', 'epadilla@ucenfotec.ac.cr', '8706-6660', 'www.estebanpadilla.com', address
+      let me = new Bee(11, 'Natalia Alpizar', 'nalpizar', 'ealpizarm@ucenfotec.ac.cr', '8869-4851', 'www.nataliaalpizar.com', address
         , company, 'https://pbs.twimg.com/profile_images/823203313709678593/FoLVmrhK_400x400.jpg');
-      let album = new Album(1000, 11, 'Estebans Photos');
+      let album = new Album(107, 11, 'Natalias Photos');
       me.setAlbum(album);
       this.bees.push(me);
 
