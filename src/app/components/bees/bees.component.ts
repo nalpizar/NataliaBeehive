@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Bee } from './../../models/Bee';
+import { BeeComponent } from './../../components/bee/bee.component';
 
 @Component({
   selector: 'app-bees',
@@ -8,17 +9,14 @@ import { Bee } from './../../models/Bee';
 })
 export class BeesComponent implements OnInit {
 
-  @Input() bees;
+  @Input() bees;  
 
-  yell(e) {
-    alert('I am yelling');
-  }
   
   constructor() { }
 
   ngOnInit() {
     
-  
+    // console.log(this.bees);  
 
   }
 

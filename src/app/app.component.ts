@@ -20,8 +20,7 @@ import { Comment } from './models/comment';
 export class AppComponent {
 
   private bees: Bee[] = [];
-  // private posts: Post[] = [];
-  private currentBeeSeleted = this;
+  private currentBeeSeleted: Bee = null;
 
   constructor(private http: Http) {
     this.loadFromJson();
@@ -96,6 +95,8 @@ export class AppComponent {
         });
       });
 
+      
+
       //1. Agregar tu información a este usuario.
       let company = new Company('nalpizar', 'A better world for everyone', 'Dream does not cost a dine');
       let address = new Address('Rea Ave', 'Mountain View Valley', 'Desamparados', '1000', new Geo
@@ -106,10 +107,13 @@ export class AppComponent {
       me.setAlbum(album);
       this.bees.push(me);
 
-      console.log(this.bees);
+      // console.log(this.bees);
+      
     });
+    
 
   }
+  
 
   loadFromServer() {
     //Data from: https://jsonplaceholder.typicode.com/

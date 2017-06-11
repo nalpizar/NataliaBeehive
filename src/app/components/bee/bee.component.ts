@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-// import { Post } from './../../models/Post';
+import { Bee } from './../../models/Bee';
 
 @Component({
   selector: 'app-bee',
@@ -8,15 +8,21 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class BeeComponent implements OnInit {
 
+  @Output() sendBee = new EventEmitter();
   @Input() bee;
-  @Output() onYell = new EventEmitter();
 
-  fireYellEvent(e){
-    this.onYell.emit(e);
-  }
   
   constructor() { }
 
   ngOnInit() {
   }
+
+  //onDone
+  // onSeeBee() {
+  //   var bee = new Bee(this.getTitle(), this.getBody());
+  //   this.sendBee.emit(bee);
+  //   this.getTitle() = 'title';
+  //   this.getBody() = 'body';
+  // }
 }
+
