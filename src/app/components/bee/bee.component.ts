@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+// import { Post } from './../../models/Post';
 
 @Component({
   selector: 'app-bee',
@@ -8,10 +9,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class BeeComponent implements OnInit {
 
   @Input() bee;
+  @Output() onYell = new EventEmitter();
+
+  fireYellEvent(e){
+    this.onYell.emit(e);
+  }
   
   constructor() { }
 
   ngOnInit() {
   }
-
 }

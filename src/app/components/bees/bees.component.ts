@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Bee } from './../../models/Bee';
 
 @Component({
   selector: 'app-bees',
@@ -9,9 +10,16 @@ export class BeesComponent implements OnInit {
 
   @Input() bees;
 
+  yell(e) {
+    alert('I am yelling');
+  }
+  
   constructor() { }
 
   ngOnInit() {
+    
+  
+
   }
 
 }

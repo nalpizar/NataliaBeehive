@@ -1,3 +1,3 @@
 <div *ngFor="let bee of bees">
-    <app-bee [bee]='bee'>Loading...</app-bee>
+    <app-bee [bee]='bee' (onYell)="yell($event)">Loading...</app-bee>
 </div>

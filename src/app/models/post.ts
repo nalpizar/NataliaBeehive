@@ -1,4 +1,5 @@
 import { Comment } from './comment';
+
 export class Post {
 
 	private id: number;

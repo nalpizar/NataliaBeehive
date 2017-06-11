@@ -20,6 +20,8 @@ import { Comment } from './models/comment';
 export class AppComponent {
 
   private bees: Bee[] = [];
+  // private posts: Post[] = [];
+  private currentBeeSeleted = this;
 
   constructor(private http: Http) {
     this.loadFromJson();
@@ -104,7 +106,7 @@ export class AppComponent {
       me.setAlbum(album);
       this.bees.push(me);
 
-      console.log(this.bees);
+      // console.log(this.bees);
     });
 
   }
@@ -127,4 +129,5 @@ export class AppComponent {
       '../assets/data/todos.json',
       '../assets/data/comments.json');
   }
+
 }

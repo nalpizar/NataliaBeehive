@@ -6,9 +6,10 @@
     <p>City: {{bee.address.city}}</p>
     <p>Post: <span *ngIf="bee.posts?.length > 0">{{bee.posts.length}}</span><span *ngIf="bee.posts?.length === 0">0</span></p>
     <p>Photos: <span *ngIf="bee.album?.photos.length > 0">{{bee.album.photos.length}}</span><span *ngIf="bee.album?.photos.length === 0">0</span></p>
-    <input type="button" value="Posts">
+    <!--<input (click)="ngOnInit()" type="button" value="Posts">
     <input type="button" value="Album">
-    <input type="button" value="Todo">
+    <input type="button" value="Todo">-->
+    <button (click)="fireYellEvent($event)">Hit me</button>
     <br>
     <br>
     <br>
