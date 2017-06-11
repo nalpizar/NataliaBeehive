@@ -101,12 +101,12 @@ export class AppComponent {
       let address = new Address('Rea Ave', 'Mountain View Valley', 'Desamparados', '1000', new Geo
         ('0.000001', '0.000002'));
       let me = new Bee(11, 'Natalia Alpizar', 'nalpizar', 'ealpizarm@ucenfotec.ac.cr', '8869-4851', 'www.nataliaalpizar.com', address
-        , company, 'https://pbs.twimg.com/profile_images/823203313709678593/FoLVmrhK_400x400.jpg');
+        , company, 'https://image.flaticon.com/icons/svg/145/145852.svg');
       let album = new Album(107, 11, 'Natalias Photos');
       me.setAlbum(album);
       this.bees.push(me);
 
-      // console.log(this.bees);
+      console.log(this.bees);
     });
 
   }

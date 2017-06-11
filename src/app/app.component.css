@@ -1,0 +1,20 @@
+.bees, .posts, .album, .todos {
+    background-color: #F2385A;
+    margin: 20px 0;
+    border-radius: 20px;
+    color: #fff;
+    border: 10px solid #fff;
+}
+
+.posts {
+    background-color: #F5A503;
+}
+
+.album {
+    background-color: #4AD9D9;
+}
+
+.todos {
+    background-color: #36B1BF;
+}
+

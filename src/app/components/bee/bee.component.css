@@ -1,0 +1,40 @@
+.bee {
+    background-color: #E9F1DF;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bee > img {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.bee ul {
+    width: 90%;
+    padding-left: 0;
+    list-style: none;
+    color: #373737;
+    font-size: 12px;
+    display: block;
+    margin: 12px auto;
+}
+
+.bee button {
+    background-color: #F2385A;
+    border-color: #F2385A;
+    margin: 0 auto;
+    display: block;
+    color: #fff;
+}
+
+.bee ul.info {
+    margin-left: 0
+}
+
+.info li {
+    display: inline;
+}

@@ -1,17 +1,20 @@
 <div class="bee">
-    <p>Name: {{bee.name}}</p>
-    <p>Username: {{bee.username}}</p>
-    <p>Email: {{bee.email}}</p>
-    <p>Phone: {{bee.phone}}</p>
-    <p>City: {{bee.address.city}}</p>
-    <p>Post: <span *ngIf="bee.posts?.length > 0">{{bee.posts.length}}</span><span *ngIf="bee.posts?.length === 0">0</span></p>
-    <p>Photos: <span *ngIf="bee.album?.photos.length > 0">{{bee.album.photos.length}}</span><span *ngIf="bee.album?.photos.length === 0">0</span></p>
-    <!--<input (click)="ngOnInit()" type="button" value="Posts">
-    <input type="button" value="Album">
-    <input type="button" value="Todo">-->
-    <button (click)="fireYellEvent($event)">Hit me</button>
-    <br>
-    <br>
+    <img src="{{bee.avatarUrl}}" alt="">
+    <ul>
+        <li>Name: {{bee.name}}</li>
+        <li>Username: {{bee.username}}</li>
+        <li>Email: {{bee.email}}</li>
+        <li>Phone: {{bee.phone}}</li>
+        <li>City: {{bee.address.city}}</li>
+        <ul class="info">
+            <small>
+                <li>Post: <span *ngIf="bee.posts?.length > 0">{{bee.posts.length}}</span><span *ngIf="bee.posts?.length === 0">0</span></li>
+                <li>Photos: <span *ngIf="bee.album?.photos.length > 0">{{bee.album.photos.length}}</span><span *ngIf="bee.album?.photos.length === 0">0</span></li>
+                <li>Todos: <span *ngIf="bee.album?.photos.length > 0">{{bee.album.photos.length}}</span><span *ngIf="bee.album?.photos.length === 0">0</span></li>
+            </small>
+        </ul>
+    </ul>
+    <button class="btn btn-primary" (click)="fireYellEvent($event)">Select Bee</button>
     <br>
     <br>
 </div>
