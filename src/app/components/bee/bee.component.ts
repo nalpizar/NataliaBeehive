@@ -8,7 +8,7 @@ import { Bee } from './../../models/Bee';
 })
 export class BeeComponent implements OnInit {
 
-  @Output() sendBee = new EventEmitter();
+  @Output() currentBeeSeleted: EventEmitter<any> = new EventEmitter();
   @Input() bee;
 
   
@@ -17,12 +17,9 @@ export class BeeComponent implements OnInit {
   ngOnInit() {
   }
 
-  //onDone
-  // onSeeBee() {
-  //   var bee = new Bee(this.getTitle(), this.getBody());
-  //   this.sendBee.emit(bee);
-  //   this.getTitle() = 'title';
-  //   this.getBody() = 'body';
-  // }
+  showPosts() {
+    this.currentBeeSeleted.emit(this.bee.getPosts());
+  }
+  
 }
 

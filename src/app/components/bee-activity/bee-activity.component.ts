@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-bee-activity',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class BeeActivityComponent implements OnInit {
 
   constructor() { }
+
+  @Input() posts;
 
   ngOnInit() {
   }

@@ -20,7 +20,7 @@ import { Comment } from './models/comment';
 export class AppComponent {
 
   private bees: Bee[] = [];
-  private currentBeeSeleted: Bee = null;
+  public posts: Post[] = [];
 
   constructor(private http: Http) {
     this.loadFromJson();
@@ -107,7 +107,7 @@ export class AppComponent {
       me.setAlbum(album);
       this.bees.push(me);
 
-      // console.log(this.bees);
+      console.log(this.bees);
       
     });
     
@@ -134,4 +134,8 @@ export class AppComponent {
       '../assets/data/comments.json');
   }
 
+  //Function to receive posts from bees los post de bees
+  recievePosts(e){
+    this.posts = e;
+  }
 }

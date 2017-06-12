@@ -1,8 +1,5 @@
-<div class="post">
-    <p>Title: {{item.title}}</p>
-    <p>Body: {{item.body}}</p>
-    <br>
-    <br>
-    <br>
-    <br>
+<div class="card">
+    <p>Title: {{post.getTitle()}}</p>
+    <p>Body: {{post.getBody()}}</p>
+    <p>Comments: <span *ngIf="post.comments?.length > 0">{{post.comments.length}}</span><span *ngIf="post.comments?.length === 0">0</span></p>
 </div>

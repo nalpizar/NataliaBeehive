@@ -7,7 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  // @Input() bee;
   @Input() post;
 
   constructor() { }

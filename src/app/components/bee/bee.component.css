@@ -1,4 +1,4 @@
-.bee > img {
+.card > img {
     width: 50%;
     height: auto;
     border-radius: 50%;
@@ -6,8 +6,8 @@
     margin: 0 auto;
 }
 
-.bee ul {
-    width: 90%;
+.card ul {
+    width: 95%;
     padding-left: 0;
     list-style: none;
     color: #373737;
@@ -16,7 +16,7 @@
     margin: 12px auto;
 }
 
-.bee ul.info {
+.card ul.info {
     margin-left: 0
 }
 
@@ -24,10 +24,14 @@
     display: inline;
 }
 
-.bee button {
+.card button {
     background-color: #F2385A;
     border-color: #F2385A;
     margin: 0 auto;
     display: block;
     color: #fff;
+}
+
+.bees {
+    background-color: #F5A503;
 }

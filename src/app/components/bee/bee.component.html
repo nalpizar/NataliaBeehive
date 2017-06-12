@@ -1,4 +1,4 @@
-<div class="bee">
+<div class="card">
     <img src="{{bee.avatarUrl}}" alt="">
     <ul>
         <li>Name: {{bee.name}}</li>
@@ -10,9 +10,9 @@
             <small>
                 <li>Post: <span *ngIf="bee.posts?.length > 0">{{bee.posts.length}}</span><span *ngIf="bee.posts?.length === 0">0</span></li>
                 <li>Photos: <span *ngIf="bee.album?.photos.length > 0">{{bee.album.photos.length}}</span><span *ngIf="bee.album?.photos.length === 0">0</span></li>
-                <!--<li>Todos: <span *ngIf="bee.album?.photos.length > 0">{{bee.album.photos.length}}</span><span *ngIf="bee.album?.photos.length === 0">0</span></li>-->
+                <li>Todos: <span *ngIf="bee.todos?.length > 0">{{bee.album.photos.length}}</span><span *ngIf="bee.todos?.length === 0">0</span></li>
             </small>
         </ul>
     </ul>
-    <button class="btn btn-primary">Select Bee</button>
+    <button class="btn btn-primary" (click)="showPosts()">Posts</button>
 </div>

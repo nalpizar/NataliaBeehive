@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Bee } from './../../models/Bee';
 import { BeeComponent } from './../../components/bee/bee.component';
 
@@ -10,14 +10,16 @@ import { BeeComponent } from './../../components/bee/bee.component';
 export class BeesComponent implements OnInit {
 
   @Input() bees;  
+  @Output() sendPostsFromBee: EventEmitter<any> = new EventEmitter;
 
   
   constructor() { }
 
   ngOnInit() {
-    
-    // console.log(this.bees);  
+  }
 
+  recieveBees(event) {
+    this.sendPostsFromBee.emit(event);
   }
 
 }
