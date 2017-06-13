@@ -4,12 +4,14 @@
         <app-bees [bees]='bees' 
         (sendPostsFromBee)='recievePosts($event)'
         (sendTodosFromBee)='recieveTodos($event)'
+        (sendAlbums)='recieveAlbums($event)'
         >Loading...</app-bees>
     </div>
     <div class="col-md-8">
         <app-bee-activity 
         [posts]='posts'
-        [todos]='todos'></app-bee-activity>
+        [todos]='todos'
+        [album]='album'></app-bee-activity>
     </div>
     <!--<div class="col-md-3 posts">
         <h1>Bee's Posts</h1>

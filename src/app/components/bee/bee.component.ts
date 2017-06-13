@@ -10,6 +10,7 @@ export class BeeComponent implements OnInit {
 
   @Output() currentBeeSeleted: EventEmitter<any> = new EventEmitter();
   @Output() currentBeeTodos: EventEmitter<any> = new EventEmitter();
+  @Output() currentBeeAlbum: EventEmitter<any> = new EventEmitter();
   @Input() bee;
 
   
@@ -24,6 +25,11 @@ export class BeeComponent implements OnInit {
 
   showTodos() {
     this.currentBeeTodos.emit(this.bee.getTodos());
+  }
+
+  showAlbums(){
+    console.log('showAlbums');
+    this.currentBeeAlbum.emit(this.bee.getAlbum());
   }
   
 }

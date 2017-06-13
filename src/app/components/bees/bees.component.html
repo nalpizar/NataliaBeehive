@@ -1,5 +1,6 @@
 <div class="bees-container" *ngFor="let bee of bees">
     <app-bee [bee]='bee' 
     (currentBeeSeleted)='recieveBees($event)'
-    (currentBeeTodos)='recieveTodos($event)'>Loading...</app-bee>
+    (currentBeeTodos)='recieveTodos($event)'
+    (currentBeeAlbum)='recieveAlbums($event)'>Loading...</app-bee>
 </div>

@@ -22,6 +22,7 @@ export class AppComponent {
   private bees: Bee[] = [];
   public posts: Post[] = [];
   public todos: Todo[] = [];
+  public  album: Album[] = [];
 
   constructor(private http: Http) {
     this.loadFromJson();
@@ -143,5 +144,11 @@ export class AppComponent {
   //Function to receive posts from bees los post de bees
   recieveTodos(e){
     this.todos = e;
+  }
+
+  recieveAlbums(event){
+    //console.log('album from AppComponent',event);
+    console.log('album app componente', typeof(this.album));
+    this.album = event;
   }
 }
