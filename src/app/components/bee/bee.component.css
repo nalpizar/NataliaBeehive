@@ -27,8 +27,8 @@
 .card button {
     background-color: #F2385A;
     border-color: #F2385A;
-    margin: 0 auto;
-    display: block;
+    /*margin: 0 auto;
+    display: block;*/
     color: #fff;
 }
 

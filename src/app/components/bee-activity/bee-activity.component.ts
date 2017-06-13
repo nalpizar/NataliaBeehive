@@ -10,6 +10,7 @@ export class BeeActivityComponent implements OnInit {
   constructor() { }
 
   @Input() posts;
+  @Input() todos;
 
   ngOnInit() {
   }

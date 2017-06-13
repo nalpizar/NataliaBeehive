@@ -21,6 +21,7 @@ export class AppComponent {
 
   private bees: Bee[] = [];
   public posts: Post[] = [];
+  public todos: Todo[] = [];
 
   constructor(private http: Http) {
     this.loadFromJson();
@@ -137,5 +138,10 @@ export class AppComponent {
   //Function to receive posts from bees los post de bees
   recievePosts(e){
     this.posts = e;
+  }
+
+  //Function to receive posts from bees los post de bees
+  recieveTodos(e){
+    this.todos = e;
   }
 }

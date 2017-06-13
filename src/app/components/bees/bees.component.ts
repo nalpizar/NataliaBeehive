@@ -11,6 +11,7 @@ export class BeesComponent implements OnInit {
 
   @Input() bees;  
   @Output() sendPostsFromBee: EventEmitter<any> = new EventEmitter;
+  @Output() sendTodosFromBee: EventEmitter<any> = new EventEmitter;
 
   
   constructor() { }
@@ -20,6 +21,10 @@ export class BeesComponent implements OnInit {
 
   recieveBees(event) {
     this.sendPostsFromBee.emit(event);
+  }
+
+  recieveTodos(event) {
+    this.sendTodosFromBee.emit(event);
   }
 
 }
