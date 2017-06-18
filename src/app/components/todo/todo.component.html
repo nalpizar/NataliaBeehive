@@ -1,3 +1,4 @@
-<div class="card">
+<div *ngIf='todo.getCompleted()' class="card">
     <p>Title: {{todo.getTitle()}}</p>
+    <button (click)='deleteTask()' class="btn btn-default">completed?</button>
 </div>

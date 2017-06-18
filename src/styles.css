@@ -23,3 +23,14 @@ body {
 .card img {
     width: 100%;
 }
+
+.btn-info {
+    margin-bottom: 20px;
+    background-color: #a91759;
+    border-color: #a91759;
+}
+
+.btn-info:hover {
+    background-color: #a91759;
+    border-color: #a91759;
+}

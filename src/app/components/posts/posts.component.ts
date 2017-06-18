@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-posts',
@@ -8,11 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PostsComponent implements OnInit {
 
   @Input() bee;
+  @Input() myUser;
+  @Output() getPost = new EventEmitter;
+
+  myPost(event){
+      this.getPost.emit(event);
+      // console.log(event);
+  }
 
   constructor() { }
 
-  ngOnInit() {
-  
-  }
+  ngOnInit() {}
 
 }

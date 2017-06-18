@@ -1,8 +1,11 @@
-
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Post">Add Post</button>
 <div *ngIf='bee'>
+    <!-- Trigger the modal with a button -->
+    <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myPost">New Post</button>-->
+    <app-new-post>Loading....</app-new-post>
     <div *ngIf='bee.getPosts().length > 0'>
         <div *ngFor="let post of bee.getPosts()">
-            <app-post [post]='post'>Loading...</app-post>
+            <app-post (sendPost)='myPost($event)' [post]='post' [myUser]='myUser'>Loading...</app-post>
         </div>
     </div>
 </div>

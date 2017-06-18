@@ -9,6 +9,10 @@ export class TodoComponent implements OnInit {
 
   @Input() todo;
 
+  deleteTask() {
+    this.todo.setCompleted(false);
+  }
+
   constructor() { }
 
   ngOnInit() {

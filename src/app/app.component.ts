@@ -20,7 +20,9 @@ import { Comment } from './models/comment';
 export class AppComponent {
 
   private bees: Bee[] = [];
-  currentBee:Bee = null;
+  currentBee:Bee = null; 
+  myUser:Bee;
+
   // public posts: Post[] = [];
   // public todos: Todo[] = [];
   // public  album: Album[] = [];
@@ -117,6 +119,11 @@ export class AppComponent {
 
       console.log(this.bees);
       this.currentBee = this.bees[2];
+      
+      this.myUser = me;
+
+      // console.log(this.myUser);
+
     });
     
 
@@ -146,19 +153,4 @@ export class AppComponent {
     this.currentBee = bee;
   }
 
-  //Function to receive posts from bees los post de bees
-  recievePosts(e){
-    // this.posts = e;
-  }
-
-  //Function to receive posts from bees los post de bees
-  recieveTodos(e){
-    // this.todos = e;
-  }
-
-  recieveAlbums(event){
-    //console.log('album from AppComponent',event);
-    // console.log('album app componente', typeof(this.album));
-    // this.album = event;
-  }
 }

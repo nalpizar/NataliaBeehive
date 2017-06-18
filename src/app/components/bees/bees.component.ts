@@ -10,9 +10,9 @@ import { BeeComponent } from './../../components/bee/bee.component';
 export class BeesComponent implements OnInit {
 
   @Input() bees;  
-  @Output() sendPostsFromBee: EventEmitter<any> = new EventEmitter;
-  @Output() sendTodosFromBee: EventEmitter<any> = new EventEmitter;
-  @Output() sendAlbums: EventEmitter<any> = new EventEmitter;
+  // @Output() sendPostsFromBee: EventEmitter<any> = new EventEmitter;
+  // @Output() sendTodosFromBee: EventEmitter<any> = new EventEmitter;
+  // @Output() sendAlbums: EventEmitter<any> = new EventEmitter;
 
   @Output() sendBeeSelected: EventEmitter<any> = new EventEmitter;
   
@@ -21,22 +21,9 @@ export class BeesComponent implements OnInit {
   ngOnInit() {
   }
 
-  recieveBees(event) {
-    this.sendPostsFromBee.emit(event);
-  }
-
-  recieveTodos(event) {
-    this.sendTodosFromBee.emit(event);
-  }
-
-  recieveAlbums(event){
-    console.log('recieveAlbums',event);
-    this.sendAlbums.emit(event);
-  }
-
   recievedBee(bee:Bee)
   {
-    console.log(bee);
+    // console.log(bee);
     this.sendBeeSelected.emit(bee);
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 // import { Comment } from './../../models/comment';
 // import { CommentComponent } from './../../components/comment/comment.component';
 
@@ -11,6 +11,12 @@ import { Component, OnInit, Input} from '@angular/core';
 export class PostComponent implements OnInit {
 
   @Input() post;
+  @Input() myUser;
+  @Output() sendPost = new EventEmitter;
+
+  sendCurrentPost(post){
+    this.sendPost.emit(post);
+  }
 
   constructor() { }
 

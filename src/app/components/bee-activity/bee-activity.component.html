@@ -1,6 +1,6 @@
 <div class="col-md-4 colums posts">
 	<h3 class="info-titles">Posts</h3>
-		<app-posts [bee]='bee'>Loading...</app-posts>
+		<app-posts (getPost)='myPostSelected($event)' [myUser]='myUser' [bee]='bee'>Loading...</app-posts>
 </div>
 <div class="col-md-4 colums album">
 	<h3 class="info-titles">Album</h3>
@@ -10,3 +10,9 @@
 	<h3 class="info-titles">Todos</h3>
 	<app-todos [bee]='bee'>Loading...</app-todos>
 </div>
+
+<app-new-comment [postSelected]="postSelected" [myUser]='myUser'>Loading...</app-new-comment>
+<!--<app-new-post [bee]='bee'></app-new-post>-->
+<app-new-post [bee]='bee'></app-new-post>
+<app-new-todo [bee]='bee'></app-new-todo>
+<!--New Todo-->

@@ -1,5 +1,6 @@
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Todo">Add ToDo</button>
 <div *ngIf='bee'>
-    <div *ngFor="let todo of bee.getTodos()">
+    <div *ngFor="let todo of bee.getTodos().slice().reverse()">
         <app-todo [todo]='todo'>Loading...</app-todo>
     </div>
 </div>
