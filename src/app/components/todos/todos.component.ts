@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TodosComponent implements OnInit {
 
-  @Input() todos;
+  @Input() bee;
 
   constructor() { }
 

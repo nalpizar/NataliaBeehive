@@ -1,17 +1,12 @@
 <div class="container">
     <div class="col-md-3 colums bees">
         <h1>Bees</h1>
-        <app-bees [bees]='bees' 
-        (sendPostsFromBee)='recievePosts($event)'
-        (sendTodosFromBee)='recieveTodos($event)'
-        (sendAlbums)='recieveAlbums($event)'
-        >Loading...</app-bees>
+        <app-bees [bees]='bees' (sendBeeSelected)='recievedBee($event)'>
+            Loading...
+            </app-bees>
     </div>
     <div class="col-md-8">
-        <app-bee-activity 
-        [posts]='posts'
-        [todos]='todos'
-        [album]='album'></app-bee-activity>
+        <app-bee-activity [bee]='currentBee'></app-bee-activity>
     </div>
     <!--<div class="col-md-3 posts">
         <h1>Bee's Posts</h1>

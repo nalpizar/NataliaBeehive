@@ -1,4 +1,8 @@
-<p>{{ album.getTitle() }} </p>
-<div *ngFor='let photo of album.getPhotos()'>
-  <app-photo [photo]="photo"></app-photo>
+<div *ngIf='bee'>
+  <div *ngIf='bee.getAlbum()'>
+    <p>{{ bee.getAlbum().getTitle() }} </p>
+    <div *ngFor='let photo of bee.getAlbum().getPhotos()'>
+      <app-photo [photo]="photo"></app-photo>
+    </div>
+  </div>
 </div>

@@ -13,6 +13,8 @@ export class BeeComponent implements OnInit {
   @Output() currentBeeAlbum: EventEmitter<any> = new EventEmitter();
   @Input() bee;
 
+  @Output() sendBeeSelected = new EventEmitter();
+
   
   constructor() { }
 
@@ -30,6 +32,10 @@ export class BeeComponent implements OnInit {
   showAlbums(){
     console.log('showAlbums');
     this.currentBeeAlbum.emit(this.bee.getAlbum());
+  }
+
+  sendBee(){
+    this.sendBeeSelected.emit(this.bee);
   }
   
 }

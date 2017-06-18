@@ -14,6 +14,7 @@ export class BeesComponent implements OnInit {
   @Output() sendTodosFromBee: EventEmitter<any> = new EventEmitter;
   @Output() sendAlbums: EventEmitter<any> = new EventEmitter;
 
+  @Output() sendBeeSelected: EventEmitter<any> = new EventEmitter;
   
   constructor() { }
 
@@ -31,6 +32,12 @@ export class BeesComponent implements OnInit {
   recieveAlbums(event){
     console.log('recieveAlbums',event);
     this.sendAlbums.emit(event);
+  }
+
+  recievedBee(bee:Bee)
+  {
+    console.log(bee);
+    this.sendBeeSelected.emit(bee);
   }
 
 }

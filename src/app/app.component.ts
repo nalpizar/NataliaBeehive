@@ -20,12 +20,18 @@ import { Comment } from './models/comment';
 export class AppComponent {
 
   private bees: Bee[] = [];
-  public posts: Post[] = [];
-  public todos: Todo[] = [];
-  public  album: Album[] = [];
+  currentBee:Bee = null;
+  // public posts: Post[] = [];
+  // public todos: Todo[] = [];
+  // public  album: Album[] = [];
 
   constructor(private http: Http) {
     this.loadFromJson();
+  }
+
+  recievedBee(bee:Bee)
+  {
+    this.currentBee = bee;
   }
 
   loadData(usersUrl: string, postsUrl: string, albumsUrl: string, photosUrl: string, todosUrl: string, commentsUrl: string) {
@@ -110,7 +116,7 @@ export class AppComponent {
       this.bees.push(me);
 
       console.log(this.bees);
-      
+      this.currentBee = this.bees[2];
     });
     
 
@@ -136,19 +142,23 @@ export class AppComponent {
       '../assets/data/comments.json');
   }
 
+  receivedBee(bee:Bee){
+    this.currentBee = bee;
+  }
+
   //Function to receive posts from bees los post de bees
   recievePosts(e){
-    this.posts = e;
+    // this.posts = e;
   }
 
   //Function to receive posts from bees los post de bees
   recieveTodos(e){
-    this.todos = e;
+    // this.todos = e;
   }
 
   recieveAlbums(event){
     //console.log('album from AppComponent',event);
-    console.log('album app componente', typeof(this.album));
-    this.album = event;
+    // console.log('album app componente', typeof(this.album));
+    // this.album = event;
   }
 }

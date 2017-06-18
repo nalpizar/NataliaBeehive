@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AlbumComponent implements OnInit {
 
-  @Input() album;
+  @Input() bee;
 
   constructor() { }
 

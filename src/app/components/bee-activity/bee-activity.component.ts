@@ -9,9 +9,9 @@ export class BeeActivityComponent implements OnInit {
 
   constructor() { }
 
-  @Input() posts;
-  @Input() todos;
-  @Input() album;
+  @Input() bee;
+  // @Input() todos;
+  // @Input() album;
 
   ngOnInit() {
   }
